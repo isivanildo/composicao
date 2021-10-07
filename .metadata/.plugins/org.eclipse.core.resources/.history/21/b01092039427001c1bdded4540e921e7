@@ -22,7 +22,7 @@ public class Programa {
 
 		System.out.print("Entre com o nome do departamento:");
 		String nomeDepartamento = sc.nextLine();
-		System.out.println("Entre com os dados do empregado:");
+		System.out.print("Entre com os dados do empregado:");
 		System.out.print("Nome: ");
 		String nome = sc.nextLine();
 		System.out.print("Nivel: ");
@@ -35,9 +35,9 @@ public class Programa {
 		System.out.println("Quantos contratos esse trabalhador tem? ");
 		int n = sc.nextInt();
 		
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i <= n; i++) {
 			System.out.println("Entre com os dados do contrato #" + i + ":");
-			System.out.print("Data DD/MM/YYYY: ");
+			System.out.print("DD/MM/YYYY: ");
 			Date dataContrato = sdf.parse(sc.next());
 			System.out.print("Valor por hora: ");
 			double valorPorHora = sc.nextDouble();
@@ -53,10 +53,6 @@ public class Programa {
 		String mesAno = sc.next();
 		int mes = Integer.parseInt(mesAno.substring(0, 2));
 		int ano = Integer.parseInt(mesAno.substring(3));
-		
-		System.out.println("Nome: " + emp.getNome());
-		System.out.println("Departamento: " + emp.getDepartamento().getNome());
-		System.out.print("Ganho para o mes " + mesAno + " : " + String.format("%.2f", emp.valorGanho(ano, mes)));
 		
 		sc.close();
 	}

@@ -1,0 +1,40 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidade.Departamento;
+import entidade.Empregados;
+import entidade.numeracao.NivelEmpregado;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Entre com o nome do departamento:");
+		String nomeDepartamento = sc.nextLine();
+		System.out.print("Entre com os dados do empregado:");
+		System.out.print("Nome: ");
+		String nome = sc.nextLine();
+		System.out.print("Nivel: ");
+		String nivel = sc.nextLine();
+		System.out.print("Salário base: ");
+		double salarioBase = sc.nextDouble();
+
+		Empregados emp = new Empregados(nome, NivelEmpregado.valueOf(nivel), salarioBase, new Departamento(nomeDepartamento));
+		
+		System.out.println("Quantos contratos esse trabalhador tem? ");
+		int n = sc.nextInt();
+		
+		for (int i = 0; i <= n; i++) {
+			System.out.println(Entre com os dados do contrato #" + i ");
+		}
+		
+		sc.close();
+	}
+
+}
