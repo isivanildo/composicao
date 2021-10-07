@@ -19,7 +19,7 @@ public class Programa {
 		System.out.print("Nivel: ");
 		String nivel = sc.nextLine();
 		System.out.print("Salário base: ");
-		double salarioBase = sc.nextDouble();
+		double salarioBase = sc.nextLine();
 
 	}
 
