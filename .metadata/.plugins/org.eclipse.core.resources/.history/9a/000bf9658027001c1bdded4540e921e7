@@ -1,0 +1,27 @@
+package entidade;
+
+import java.util.List;
+
+import entidade.numeracao.NivelEmpregado;
+
+public class Empregados {
+	
+	private String nome;
+	private NivelEmpregado nivel;
+	private double salarioBase;
+	
+	private Departamento departamento;
+	private List<ContratoHora> contrato;
+	
+	public Empregados() {}
+
+	public Empregados(String nome, NivelEmpregado nivel, double salarioBase, Departamento departamento) {
+		this.nome = nome;
+		this.nivel = nivel;
+		this.salarioBase = salarioBase;
+		this.departamento = departamento;
+	}
+	
+	
+
+}
